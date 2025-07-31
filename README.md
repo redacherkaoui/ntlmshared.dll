@@ -1,6 +1,6 @@
 ## ntlmshared.dll: The New Home of NTLMSSP Parsing—and Its Vulnerabilities
 
-Windows authentication over SMB traditionally relied on the NTLM Security Support Provider (SSP) buried inside **msv1\_0.dll**. Recent Windows releases have refactored that logic into a standalone library—**ntlmshared.dll**—to centralize NTLM parsing across multiple authentication flows (SMB, HTTP, CIFS, etc.). This article dives deep into how **ntlmshared.dll** now performs SPNEGO unwrapping, NTLMSSP signature and message‐type dispatch, AV-pair enumeration, and why its core parser is itself ripe for exploitation.
+Windows authentication over SMB traditionally relied on the NTLM Security Support Provider (SSP) buried inside **msv1\_0.dll**. Recent Windows releases have refactored that logic into a standalone library—**ntlmshared.dll**—to centralize NTLM parsing across multiple authentication flows (SMB, HTTP, CIFS, etc.). **ntlmshared.dll** now performs SPNEGO unwrapping, NTLMSSP signature and message‐type dispatch, AV-pair enumeration, its core parser is itself ripe for exploitation.
 
 ---
 
